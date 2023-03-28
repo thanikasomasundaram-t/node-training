@@ -1,5 +1,6 @@
 let http = require('http');
 let fs = require('fs');
+let rn = require('random-number');
 
 
 http.createServer((req, res, err) => {
@@ -8,9 +9,13 @@ http.createServer((req, res, err) => {
         res.write(err);
     }
     let colors = JSON.parse(fs.readFileSync('./color_palette.json'));
-
+    let gen = rn.generator({
+        min: 0,
+        max: colors.length,
+        integer: true, 
+    });
     for (count = 0; count < 5; count++) {
-        setRandomColors.push(colors[Math.floor(Math.random() * colors.length)]);
+        setRandomColors.push(colors[gen()]);
     }
 
     fs.writeFileSync('./random_colors.json', JSON.stringify(setRandomColors));
