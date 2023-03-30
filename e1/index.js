@@ -1,7 +1,7 @@
 let fs = require('fs');
 let setRandomColors = [];
 
-let colors = JSON.parse(fs.readFileSync('./color_palette.json'));
+let colors = JSON.parse(fs.readFileSync('./color_palette.json', 'UTF-8'));
 
 for(count = 0; count < 5; count ++) {
     setRandomColors.push(colors[Math.floor(Math.random()*colors.length)]);
