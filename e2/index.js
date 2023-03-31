@@ -1,26 +1,30 @@
 let http = require('http');
-let fs = require('fs');
-
+let { readFileSync, writeFileSync } = require('fs');
 
 http.createServer((req, res, err) => {
-    let setRandomColors = [];
+    let setRandomColors = new Set();
     if (err) {
         res.write(err);
     }
-    let colors = JSON.parse(fs.readFileSync('./color_palette.json'));
+    //read file from file color_palette
+    let colors = JSON.parse(readFileSync('./color_palette.json', 'UTF-8'));
 
-    for (count = 0; count < 5; count++) {
-        setRandomColors.push(colors[Math.floor(Math.random() * colors.length)]);
+    //loop till five random colors are pushed to array randomColors.
+    while (setRandomColors.size < 5) {
+        let randomNumber = Math.floor(Math.random() * colors.length);
+        setRandomColors.add(colors[randomNumber]);
     }
+    // write into file
+    writeFileSync('./random_colors.json', JSON.stringify(Array.from(setRandomColors)));
 
-    fs.writeFileSync('./random_colors.json', JSON.stringify(setRandomColors));
-
-    let getRandomColors = JSON.parse(fs.readFileSync('./random_colors.json'));
+    //read from written file
+    let getRandomColors = JSON.parse(readFileSync('./random_colors.json'));
 
     console.log("--------------------RANDOM FIVE COLORS----------------------")
     console.log(getRandomColors);
 
     res.write(JSON.stringify(getRandomColors));
     res.end();
+
 }).listen(4000);
 
