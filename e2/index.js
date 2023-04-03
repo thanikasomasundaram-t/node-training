@@ -1,5 +1,4 @@
 let http = require('http');
-let { writeFileSync, write } = require('fs');
 let { readFileService } = require('./services/readFileService');
 let { writeFileService } = require('./services/writeFileService');
 require('dotenv').config();
