@@ -1,29 +1,38 @@
 let http = require('http');
-let { readFileSync, writeFileSync } = require('fs');
+let { writeFileSync, write } = require('fs');
+let { readFileService } = require('./services/readFileService');
+let { writeFileService } = require('./services/writeFileService');
+require('dotenv').config();
 
-http.createServer((req, res, err) => {
+http.createServer(async (req, res, err) => {
     let setRandomColors = new Set();
     if (err) {
         res.write(err);
     }
-    //read file from file color_palette
-    let colors = JSON.parse(readFileSync('./color_palette.json', 'UTF-8'));
+    try {
+        //read file from file color_palette
+        console.log(process.env.SOURCE_FILE_PATH);
+        const colors = await readFileService(process.env.SOURCE_FILE_PATH);
+        //loop till five random colors are pushed to array randomColors.
+        while (setRandomColors.size < 5) {
+            let randomNumber = Math.floor(Math.random() * colors.length);
+            setRandomColors.add(colors[randomNumber]);
+        }
 
-    //loop till five random colors are pushed to array randomColors.
-    while (setRandomColors.size < 5) {
-        let randomNumber = Math.floor(Math.random() * colors.length);
-        setRandomColors.add(colors[randomNumber]);
+        // write into file
+        writeFileService(process.env.DESTINATION_FILE_PATH, setRandomColors);
+
+        const getRandomColors = await readFileService(process.env.DESTINATION_FILE_PATH);
+
+        console.log("--------------------RANDOM FIVE COLORS----------------------")
+        console.log(getRandomColors);
+
+        res.write(JSON.stringify(getRandomColors));
+
     }
-    // write into file
-    writeFileSync('./random_colors.json', JSON.stringify(Array.from(setRandomColors)));
-
-    //read from written file
-    let getRandomColors = JSON.parse(readFileSync('./random_colors.json'));
-
-    console.log("--------------------RANDOM FIVE COLORS----------------------")
-    console.log(getRandomColors);
-
-    res.write(JSON.stringify(getRandomColors));
+    catch (err) {
+        res.write(JSON.stringify(err));
+    }
     res.end();
 
 }).listen(4000);
