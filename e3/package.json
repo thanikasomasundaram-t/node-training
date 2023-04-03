@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "random-number": "^0.0.9"
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
