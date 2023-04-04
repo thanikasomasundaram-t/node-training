@@ -1,9 +1,12 @@
 let http = require('http');
+var _ = require('underscore');
 let { readFileService } = require('./services/readFileService');
 let { writeFileService } = require('./services/writeFileService');
 require('dotenv').config();
 
 http.createServer(async (req, res, err) => {
+
+    _.each([1,2,3], (i) => console.log(i))
     let setRandomColors = new Set();
     if (err) {
         res.write(err);
@@ -36,4 +39,7 @@ http.createServer(async (req, res, err) => {
     res.end();
 
 }).listen(4000);
+
+
+
 
