@@ -1,9 +1,10 @@
 
 const express = require('express');
 const app = express();
-const port = 5000;
 const  { createFile } = require("./services/createFileService");
 const fs = require('fs');
+const cors = require('cors');
+require('dotenv').config();
 const addToListRoute = require('./routes/addToListRoute').router;
 const deleteInListRoute = require('./routes/deleteInListRoute').router;
 const updateToListRoute = require('./routes/updateToListRoute').router;
@@ -12,6 +13,8 @@ const listAllRoute = require('./routes/listAllRoute').router;
 
 
 app.use(express.json());
+
+app.use(cors());
 
 app.use('/add', addToListRoute);
 
@@ -27,8 +30,8 @@ app.use('/', (req, res) => {
     res.send("Base root");
 });
 
-app.listen(port, ()=> {
-    console.log(port + 'is connected');
+app.listen(process.env.PORT, ()=> {
+    console.log(process.env.PORT + 'is connected');
     if(!fs.existsSync('./cdw_ace23_buddies.json')) {
         createFile();
     }
