@@ -1,4 +1,4 @@
-let { addToListController } = require('../controllers/addToListController');
+let { addToListController } = require('./addToListController');
 const express = require("express");
 const router = express.Router();
 
