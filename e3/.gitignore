@@ -1,0 +1,9 @@
+#ignore node-modules
+node_modules
+
+#ignore DS_store
+.DS_Store
+
+#ignore dotenv
+.env
+
