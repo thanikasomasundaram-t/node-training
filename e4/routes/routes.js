@@ -8,10 +8,10 @@ router.get('/', controller.listAll);
 
 router.get('/:id', controller.getOneFromList);
 
-router.post('/', controller.addToListController);
+router.post('/', controller.addToList);
 
-router.put('/', controller.updateToListController);
+router.put('/', controller.updateToList);
 
-router.delete('/:id', controller.deleteInListController);
+router.delete('/:id', controller.deleteInList);
 
 module.exports = router;
