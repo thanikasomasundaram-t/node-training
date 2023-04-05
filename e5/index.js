@@ -1,16 +1,28 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 5000;
-const  { createFile } = require("./services/fileService");
-const fs = require('fs');
-const router = require('./routes/routes');
+const { createFile } = require("./services/fileService");
+const fs = require("fs");
+const router = require("./routes/routes");
+require('dotenv').config();
 
-app.use('/', express.json(), router);
 
-app.listen(port, ()=> {
-    console.log(port + 'is connected');
-    if(!fs.existsSync('./cdw_ace23_buddies.json')) {
-        createFile();
-    }
+app.use(express.json());
+
+app.use("/buddies", router);
+
+app.use('/',(req, res) => {
+  res.send("Base")
 });
 
+app.listen(process.env.PORT, async () => {
+  console.log(process.env.PORT + "is connected");
+  if (!fs.existsSync(process.env.CREATE_FILE_PATH)) {
+    try {
+      await createFile();
+    }
+    catch(err) {
+      console.log(err);
+    }
+  }
+});
