@@ -5,7 +5,7 @@ const  { createFile } = require("./services/fileService");
 const fs = require('fs');
 const router = require('./routes/routes');
 
-app.use('/', express.json(), router);
+app.use('/buddies', express.json(), router);
 
 app.listen(port, ()=> {
     console.log(port + 'is connected');

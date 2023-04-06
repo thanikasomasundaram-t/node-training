@@ -13,12 +13,13 @@ const addToList = (req, res, err) =>  {
 const getOneFromList = (req, res, err) => {
     let employees = readFile();
     let id = req.params.id;
-    employees.forEach((element) => {
+    for(element of employees) {
         if(element.employeeId == id) {
             res.send(element);
+            return;
         }
-    })
-    res.end();
+    }
+    res.end("id doesnot exists");
 };
 
 const updateToList =  (req, res, err) => {
