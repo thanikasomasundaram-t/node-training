@@ -1,0 +1,22 @@
+Apr-06-2023 14:10:59 [33mwarn[39m: Error: [33mENOENT: no such file or directory, open './cdw_ace23_bddies.json'[39m
+    at Object.openSync (node:fs:600:3)
+    at Object.readFileSync (node:fs:468:35)
+    at /Users/thanikasomasundaram/Documents/GitHub/node-training/e5/services/fileService.js:21:21
+    at new Promise (<anonymous>)
+    at readFile (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/services/fileService.js:18:10)
+    at listAll (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/controller/controller.js:32:24)
+    at Layer.handle [as handle_request] (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/layer.js:95:5)
+Apr-06-2023 14:11:15 [33mwarn[39m: Error: [33mENOENT: no such file or directory, open './cdw_ace23_bddies.json'[39m
+    at Object.openSync (node:fs:600:3)
+    at Object.readFileSync (node:fs:468:35)
+    at /Users/thanikasomasundaram/Documents/GitHub/node-training/e5/services/fileService.js:21:21
+    at new Promise (<anonymous>)
+    at readFile (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/services/fileService.js:18:10)
+    at listAll (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/controller/controller.js:32:24)
+    at Layer.handle [as handle_request] (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/thanikasomasundaram/Documents/GitHub/node-training/e5/node_modules/express/lib/router/layer.js:95:5)

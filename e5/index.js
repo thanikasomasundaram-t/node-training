@@ -4,6 +4,7 @@ const port = 5000;
 const { createFile } = require("./services/fileService");
 const fs = require("fs");
 const router = require("./routes/routes");
+const constants = require('./constants');
 require('dotenv').config();
 
 
@@ -17,7 +18,7 @@ app.use('/',(req, res) => {
 
 app.listen(process.env.PORT, async () => {
   console.log(process.env.PORT + "is connected");
-  if (!fs.existsSync(process.env.CREATE_FILE_PATH)) {
+  if (!fs.existsSync(constants.CREATE_FILE_PATH)) {
     try {
       await createFile();
     }

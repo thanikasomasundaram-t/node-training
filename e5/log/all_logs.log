@@ -1,0 +1,3 @@
+[Apr-06-2023 18:34:52]	warn:	given request not found path: GET /buddies/3545y
+[Apr-06-2023 18:36:47]	warn:	bad request by client path: POST /buddies
+[Apr-06-2023 18:36:59]	warn:	given request not found path: DELETE /buddies/00

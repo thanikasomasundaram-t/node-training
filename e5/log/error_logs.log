@@ -1,0 +1,67 @@
+Apr-06-2023 14:18:23 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 14:18:23 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 14:19:05 error: undefined
+Apr-06-2023 14:19:05 error: undefined
+Apr-06-2023 14:19:22 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 14:19:22 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 14:20:33 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 14:20:33 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 15:25:22 error: undefined
+Apr-06-2023 15:25:22 error: undefined
+Apr-06-2023 16:51:43 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 16:51:43 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json'
+Apr-06-2023 16:52:20 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' message
+Apr-06-2023 16:52:20 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' message
+Apr-06-2023 16:52:37 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' [object Object]
+Apr-06-2023 16:52:37 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' [object Object]
+Apr-06-2023 16:57:52 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' [object Object]
+Apr-06-2023 16:57:52 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' [object Object]
+Apr-06-2023 17:00:40 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/
+Apr-06-2023 17:00:40 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/
+Apr-06-2023 17:02:45 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/ undefined
+Apr-06-2023 17:02:45 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/ undefined
+Apr-06-2023 17:03:00 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/ undefined
+Apr-06-2023 17:03:00 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/ undefined
+Apr-06-2023 17:03:18 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/ undefined
+Apr-06-2023 17:03:41 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' /buddies/
+Apr-06-2023 17:04:09 error: Error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET undefined /buddies/
+Apr-06-2023 17:06:12 error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+MMM-DD-YYYY HH:mm:ss error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+[Apr-06-2023 17:07:00] error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+[Apr-06-2023 17:07:23]
+ error: ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+[Apr-06-2023 17:07:43]
+error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+[Apr-06-2023 17:07:56]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+
+[Apr-06-2023 17:07:59]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+
+[Apr-06-2023 17:08:09]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+
+[Apr-06-2023 17:08:51]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+
+[Apr-06-2023 17:09:01]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+
+[Apr-06-2023 17:09:15]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /buddies/
+[Apr-06-2023 17:16:24]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET path:/buddies/
+[Apr-06-2023 17:16:54]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' path: GET /buddies/
+[Apr-06-2023 17:21:50]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' path: POST /buddies
+[Apr-06-2023 17:24:29]	error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' path: GET /buddies/
+[Apr-06-2023 17:35:24]	error:	The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:35:52]	error:	The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:35:53]	error:	The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:36:27]	error:	TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:37:05]	error:	The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:38:03]	error:	The "path" argument must be of type string or an instance of Buffer or URL. Received undefined path: GET /buddies/
+[Apr-06-2023 17:39:25]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddis.json' path: GET /buddies/
+[Apr-06-2023 17:40:24]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddis.json' path: GET /buddies/
+[Apr-06-2023 17:40:52]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddis.json' path: GET /buddies/
+[Apr-06-2023 17:41:09]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddis.json' path: POST /buddies
+[Apr-06-2023 17:44:48]	error:	File doesnot exists path: POST /buddies
+[Apr-06-2023 17:47:52]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: GET /buddies/
+[Apr-06-2023 17:51:53]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: POST /buddies
+[Apr-06-2023 17:51:58]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: GET /buddies/
+[Apr-06-2023 17:52:07]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: DELETE /buddies/000
+[Apr-06-2023 18:02:41]	error:	given request not found path: GET /buddies/79870
+[Apr-06-2023 18:03:05]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: GET /buddies/
+[Apr-06-2023 18:03:17]	error:	given request not found path: GET /buddies/3545y
