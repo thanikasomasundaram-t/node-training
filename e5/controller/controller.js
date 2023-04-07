@@ -4,15 +4,22 @@ const constants = require('../constants');
 const devLogger = require('../log/devLogger')
 
 const validateData = (data) => {
-    if (data.employeeId && !(/^[0-9]{1,30}$/.test(data.employeeId))
-        || data.realName && !(/^[a-zA-z]{1,50}$/.test(data.realName))
-        || (data.nickName ? !(/^[a-zA-Z]{1,50}$/.test(data.nickName)) : false)
-        || (data.dob ? !(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/.test(data.dob)) : false)
-        || (data.hobbies ? !(Array.isArray(data.hobbies)) : false)) {
+    if (data.employeeId == undefined || !(/^[0-9]{1,30}$/.test(data.employeeId))) {
+        return false;
+    }
+    if (data.realName == undefined || !(/^[a-zA-z]{1,50}$/.test(data.realName))) {
+        return false;
+    }
+    if (data.nickName ? !(/^[a-zA-Z]{1,50}$/.test(data.nickName)) : false) {
+        return false;
+    }
+    if (data.dob ? !(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/.test(data.dob)) : false) {
+        return false;
+    }
+    if (data.hobbies ? !(Array.isArray(data.hobbies)) : false) {
         return false;
     }
     return true;
-
 }
 
 const listAll = async (req, res, err) => {
@@ -24,10 +31,18 @@ const listAll = async (req, res, err) => {
     }
 }
 
-const addToList = async (req, res, err) => {
+const addToList = async(req, res, err) => {
     try {
         let data = await readFile(constants.READ_FILE_PATH, req, res);
-        if(validateData(req.body)) {
+
+        if (validateData(req.body, req, res)) {
+            for (e of data) {
+                if (e.employeeId == req.body.employeeId) {
+                    devLogger.warn(`buddy already exists path: ${req.method} ${req.originalUrl}`);
+                    res.status(400);
+                    throw "buddy already exists";
+                }
+            }
             data.push(req.body);
             await writeFile(constants.WRITE_FILE_PATH, data, req, res);
             res.send(data);
@@ -35,13 +50,12 @@ const addToList = async (req, res, err) => {
         else {
             devLogger.warn(`bad request by client path: ${req.method} ${req.originalUrl}`);
             res.status(400);
-            res.send("Invalid input");
+            throw "invalid input";
         }
     }
-    catch(err) {
+    catch (err) {
         res.send(err);
     }
-
 };
 
 const getOneFromList = async (req, res, err) => {
@@ -61,7 +75,6 @@ const getOneFromList = async (req, res, err) => {
     catch (err) {
         res.send(err);
     }
-
 };
 
 const updateToList = async (req, res, err) => {
@@ -85,7 +98,6 @@ const updateToList = async (req, res, err) => {
     catch (err) {
         res.send(err);
     }
-
 };
 
 const deleteInList = async (req, res, err) => {

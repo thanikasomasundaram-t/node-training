@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 5000;
 const { createFile } = require("./services/fileService");
 const fs = require("fs");
 const router = require("./routes/routes");

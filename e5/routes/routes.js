@@ -14,6 +14,4 @@ router.put('/', controller.updateToList);
 router.delete('/:id', controller.deleteInList);
 
 
-
-
 module.exports = router;
