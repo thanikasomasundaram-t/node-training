@@ -65,3 +65,16 @@ error:	ENOENT: no such file or directory, open './cdw_ace23_bddies.json' GET /bu
 [Apr-06-2023 18:02:41]	error:	given request not found path: GET /buddies/79870
 [Apr-06-2023 18:03:05]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json' path: GET /buddies/
 [Apr-06-2023 18:03:17]	error:	given request not found path: GET /buddies/3545y
+[Apr-07-2023 10:01:30]	error:	Unexpected end of JSON input path: POST /buddies/
+[Apr-07-2023 10:01:32]	error:	Unexpected end of JSON input path: POST /buddies/
+[Apr-07-2023 10:01:38]	error:	Unexpected end of JSON input path: POST /buddies/
+[Apr-07-2023 10:04:24]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddies.json' path: POST /buddies/
+[Apr-07-2023 10:04:25]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddies.json' path: POST /buddies/
+[Apr-07-2023 10:04:25]	error:	ENOENT: no such file or directory, open './cdw_ace23_buddies.json' path: POST /buddies/
+[Apr-07-2023 11:11:37]	error:	ENOENT: no such file or directory, open './cdw_ace23_budies.json'
+[Apr-07-2023 11:22:12]	error:	[status: 500 message: File not found] [path: GET /buddies/]
+[Apr-07-2023 11:23:41]	error:	[status: 500 message: ENOENT: no such file or directory, open './cdw_ace23_budies.json'] [path: GET /buddies/]
+[Apr-07-2023 11:24:14]	error:	[status: 500 message: File not found] [path: GET /buddies/]
+[Apr-07-2023 11:24:36]	error:	[status: 500 message: File not found] path: GET /buddies/
+[Apr-07-2023 11:27:21]	error:	[status: 500 message: File not found] path: GET /buddies/001
+[Apr-07-2023 11:30:21]	error:[status: 500 message: File not found] path: GET/buddies/0019

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { createFile } = require("./services/fileService");
+const { createFile } = require("./utils/fileIO");
 const fs = require("fs");
 const router = require("./routes/routes");
 const constants = require('./constants');
@@ -19,7 +19,7 @@ app.listen(process.env.PORT, async () => {
   console.log(process.env.PORT + "is connected");
   if (!fs.existsSync(constants.CREATE_FILE_PATH)) {
     try {
-      await createFile();
+      await createFile(constants.CREATE_FILE_PATH);
     }
     catch(err) {
       console.log(err);

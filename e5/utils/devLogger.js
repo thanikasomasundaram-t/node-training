@@ -5,10 +5,10 @@ require('dotenv').config();
 const constants = require('../constants');
 
 const logFormat = printf(({ level, message, timestamp, stack }) => {
-  return `[${ timestamp }]\t${ level }:\t${ message }`
+  return `[${ timestamp }]\t${ level }:${ message }`
 });
 
-const devLogger = createLogger({
+const logger = createLogger({
   level: process.env.LEVEL,
   format: combine(
     timestamp({
@@ -30,5 +30,16 @@ const devLogger = createLogger({
     }),
   ]
 });
+
+const devLogger = (err, req, res) => {
+    switch(err.level) {
+      case "error":
+        logger.error(`[status: ${ err.status } message: ${ err.message }] path: ${ req.method}${ req.originalUrl }`);
+        break;
+      case "warn":
+        logger.warn(`[status: ${ err.status } message: ${ err.message }] path: ${ req.method}${ req.originalUrl }`);
+        break;
+    }
+}
 
 module.exports = devLogger;

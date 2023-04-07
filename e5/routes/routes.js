@@ -3,15 +3,15 @@ const controller = require('../controller/controller');
 const express = require('express');
 const router = express.Router();
 
-router.get('/', controller.listAll);
+router.get('/', controller.getAllBuddy);
 
-router.get('/:id', controller.getOneFromList);
+router.get('/:id', controller.getBuddy);
 
-router.post('/', controller.addToList);
+router.post('/', controller.addBuddy);
 
-router.put('/', controller.updateToList);
+router.put('/', controller.editBuddy);
 
-router.delete('/:id', controller.deleteInList);
+router.delete('/:id', controller.deleteBuddy);
 
 
 module.exports = router;
