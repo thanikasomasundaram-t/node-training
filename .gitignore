@@ -3,3 +3,6 @@ node_modules
 
 # ignore DS store
 .DS_store
+
+#ignore env file
+.env
