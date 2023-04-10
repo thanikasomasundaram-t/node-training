@@ -55,3 +55,7 @@
 [Apr-10-2023 11:51:33]	error:user already exists
 [Apr-10-2023 11:51:54]	error:Cannot read properties of undefined (reading 'username')
 [Apr-10-2023 11:52:15]	error:service.getAllTasks is not a function
+[Apr-10-2023 14:32:49]	error:Assignment to constant variable.
+[Apr-10-2023 14:42:41]	error:Assignment to constant variable.
+[Apr-10-2023 14:42:59]	error:Assignment to constant variable.
+[Apr-10-2023 14:52:19]	error:usersTasks[user].keys is not a function

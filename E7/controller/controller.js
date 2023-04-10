@@ -20,6 +20,7 @@ const signup = async(req, res, err) => {
     res.status(err.status).send({ messsage: err.message });
   }
 }
+
 //LOGIN
 const login = async(req, res, err) => {
   try {
@@ -39,7 +40,7 @@ const addTask = (req, res, err) => {
   try {
     const users = readFile(constants.USER_CREDENTIALS);
     const user = service.getUser(users, req.user);
-    const task = req.body;
+    let task = req.body;
     service.validateTask(task);
     const usersTasks = readFile(constants.USER_TASKS);
     const newTasks = service.addTask(usersTasks, user.username, task);

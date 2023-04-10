@@ -84,13 +84,29 @@ const getUser = (users, incomingUser) => {
 }
 
 const validateTask = (task) => {
-  return true;
+  let flag = true;
+  console.log(task.description == undefined || !(/^[a-zA-z]{1,50}$/.test(task.description)));
+  if(task.title == undefined || !(/^[a-zA-z]{1,50}$/.test(task.title))) {
+    console.log("1234567")
+    flag = false;
+  }
+
+}
+
+const addTaskId = (task) => {
+  return {
+    id: Date.now(),
+    ...task,
+  }
 }
 
 const addTask = (usersTasks, user, task) => {
-  const userTasks = usersTasks[user] || [];
+  let userTasks = usersTasks[user] || {};
   if(userTasks) {
-    userTasks.push(task);
+    userTasks = {
+      ...userTasks,
+      [Date.now()]: task,
+    };
     usersTasks[user] = userTasks;
     return usersTasks;
   }
@@ -103,7 +119,7 @@ const addTask = (usersTasks, user, task) => {
 }
 
 const getAllTasks = (usersTasks, user) => {
-  if(usersTasks[user] && usersTasks[user].length !== 0) {
+  if(usersTasks[user] && Object.keys(usersTasks[user]).length !== 0) {
     return usersTasks[user];
   }
   return { message: "no tasks to show"};
@@ -118,4 +134,5 @@ module.exports = {
   generateToken,
   getUser,
   getAllTasks,
+  addTaskId,
 }
