@@ -1,0 +1,8 @@
+#ignore nodemodules
+node_modules
+
+#ignore es store
+.ES_Store
+
+#ignore dotenv
+.env

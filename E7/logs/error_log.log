@@ -1,0 +1,22 @@
+[Apr-09-2023 18:08:17]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:08:37]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:09:38]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:10:02]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:10:47]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:01]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:26]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:42]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:13:00]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:13:38]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-10-2023 05:46:45]	error:service.authenticateUser is not a function
+[Apr-10-2023 05:55:20]	error:user not found
+[Apr-10-2023 05:55:25]	error:user not found
+[Apr-10-2023 05:55:28]	error:user already exists
+[Apr-10-2023 05:55:47]	error:password doesnot match
+[Apr-10-2023 05:55:55]	error:user not found
+[Apr-10-2023 05:55:57]	error:user not found
+[Apr-10-2023 05:57:56]	error:user not found
+[Apr-10-2023 05:58:04]	error:password doesnot match
+[Apr-10-2023 06:26:33]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
+[Apr-10-2023 06:27:03]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
+[Apr-10-2023 06:27:37]	error:ENOENT: no such file or directory, open './data/user_tasks.json'

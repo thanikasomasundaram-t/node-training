@@ -1,0 +1,62 @@
+[Apr-09-2023 17:38:11]	warn:user already exists
+[Apr-09-2023 17:38:53]	warn:user already exists
+[Apr-09-2023 17:39:13]	warn:user already exists
+[Apr-09-2023 17:39:43]	warn:user already exists
+[Apr-09-2023 17:47:59]	warn:user already exists
+[Apr-09-2023 17:48:11]	warn:user already exists
+[Apr-09-2023 17:50:31]	warn:user already exists
+[Apr-09-2023 18:08:17]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:08:37]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:09:38]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:10:02]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:10:47]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:01]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:26]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:12:42]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:13:00]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:13:38]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+[Apr-09-2023 18:20:16]	warn:constants is not defined
+[Apr-09-2023 18:29:58]	warn:Assignment to constant variable.
+[Apr-09-2023 18:31:09]	warn:Assignment to constant variable.
+[Apr-09-2023 18:31:26]	warn:user already exists
+[Apr-09-2023 18:31:28]	warn:user already exists
+[Apr-09-2023 18:31:36]	warn:Assignment to constant variable.
+[Apr-09-2023 18:32:16]	warn:Assignment to constant variable.
+[Apr-09-2023 18:32:55]	warn:users.find is not a function
+[Apr-09-2023 18:37:33]	warn:users.find is not a function
+[Apr-09-2023 18:37:59]	warn:users.find is not a function
+[Apr-09-2023 19:08:11]	warn:users.find is not a function
+[Apr-09-2023 19:08:38]	warn:users.find is not a function
+[Apr-09-2023 19:10:52]	warn:users.find is not a function
+[Apr-09-2023 19:11:51]	warn:users.find is not a function
+[Apr-09-2023 19:12:09]	warn:users.find is not a function
+[Apr-09-2023 19:18:29]	warn:users.find is not a function
+[Apr-09-2023 19:19:07]	warn:users.find is not a function
+[Apr-09-2023 19:20:50]	warn:users.find is not a function
+[Apr-09-2023 19:21:21]	warn:users.find is not a function
+[Apr-09-2023 19:21:34]	warn:user already exists
+[Apr-09-2023 19:23:58]	warn:user already exists
+[Apr-09-2023 19:24:16]	warn:users.find is not a function
+[Apr-09-2023 19:25:34]	warn:users.find is not a function
+[Apr-09-2023 19:26:09]	warn:users.find is not a function
+[Apr-09-2023 19:26:36]	warn:users.find is not a function
+[Apr-09-2023 19:30:19]	warn:users.find is not a function
+[Apr-09-2023 19:31:33]	warn:users.find is not a function
+[Apr-09-2023 19:31:50]	warn:users.find is not a function
+[Apr-09-2023 19:36:53]	warn:user already exists
+[Apr-09-2023 19:37:19]	warn:user already exists
+[Apr-09-2023 19:38:03]	warn:user already exists
+[Apr-09-2023 19:40:13]	warn:user already exists
+[Apr-09-2023 19:40:39]	warn:user already exists
+[Apr-10-2023 05:46:45]	error:service.authenticateUser is not a function
+[Apr-10-2023 05:55:20]	error:user not found
+[Apr-10-2023 05:55:25]	error:user not found
+[Apr-10-2023 05:55:28]	error:user already exists
+[Apr-10-2023 05:55:47]	error:password doesnot match
+[Apr-10-2023 05:55:55]	error:user not found
+[Apr-10-2023 05:55:57]	error:user not found
+[Apr-10-2023 05:57:56]	error:user not found
+[Apr-10-2023 05:58:04]	error:password doesnot match
+[Apr-10-2023 06:26:33]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
+[Apr-10-2023 06:27:03]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
+[Apr-10-2023 06:27:37]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
