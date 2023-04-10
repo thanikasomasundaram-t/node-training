@@ -1,23 +1,22 @@
 const { readFile, writeFile } = require("../utils/fileIO");
-const constants = require('../constants');
 const devLogger = require('../utils/devLogger');
+const constants = require('../constants');
 const service = require('../services/controllerService');
 require('dotenv').config();
 
 
-
-
+// get all buddy from list
 const getAllBuddy = async (req, res, err) => {
     try {
         res.send(await readFile(constants.READ_FILE_PATH));
     }
     catch (err) {
         devLogger(err, req, res);
-        res.status(err.status);
-        res.send(err.message);
+        res.status(err.status).send(err.message);
     }
 }
 
+// get single buddy by id
 const getBuddy = async (req, res, err) => {
     try {
         let buddies = await readFile(constants.READ_FILE_PATH);
@@ -26,11 +25,11 @@ const getBuddy = async (req, res, err) => {
     }
     catch (err) {
         devLogger(err, req, res);
-        res.status(err.status);
-        res.send(err.message);
+        res.status(err.status).send(err.message);
     }
 };
 
+//add buddy to list
 const addBuddy = async (req, res, err) => {
     try {
         let buddies = await readFile(constants.READ_FILE_PATH);
@@ -38,8 +37,7 @@ const addBuddy = async (req, res, err) => {
         service.checkUniqueBuddy(buddies, req.body)
         const updatedBuddies = service.addBuddy(buddies, req.body);
         await writeFile(constants.WRITE_FILE_PATH, buddies);
-        res.status(201);
-        res.send(updatedBuddies);
+        res.status(201).send(updatedBuddies);
     }
     catch (err) {
         devLogger(err, req, res);
@@ -48,7 +46,7 @@ const addBuddy = async (req, res, err) => {
     }
 };
 
-
+//update existing buddy details
 const editBuddy = async (req, res, err) => {
     try {
         let buddies = await readFile(constants.READ_FILE_PATH);
@@ -60,11 +58,11 @@ const editBuddy = async (req, res, err) => {
     }
     catch (err) {
         devLogger(err, req, res);
-        res.status(err.status);
-        res.send(err.message);
+        res.status(err.status).send(err.message);
     }
 };
 
+//delete buddy by given id
 const deleteBuddy = async (req, res, err) => {
     try {
         let buddies = await readFile(constants.READ_FILE_PATH);
@@ -74,8 +72,7 @@ const deleteBuddy = async (req, res, err) => {
     }
     catch (err) {
         devLogger(err, req, res);
-        res.status(err.status);
-        res.send(err.message);
+        res.status(err.status).send(err.message);
     }
 };
 
