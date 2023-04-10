@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const createFile = (path) => {
+const createFile = (path, data) => {
   try {
-    fs.writeFileSync(path,'[]', 'utf-8');
+    fs.writeFileSync(path,JSON.stringify(data), 'utf-8');
   }
   catch(err) {
     throw err;

@@ -11,7 +11,9 @@ const signup = async(req, res, err) => {
     service.checkUserAlreadyExists(users, incomingUser);
     let newUsers = await service.addUser(users, incomingUser);
     writeFile(constants.USER_CREDENTIALS, newUsers);
-    res.send({ message: "user successfully added"});
+    const token = service.generateToken(incomingUser);
+    console.log(token);
+    res.send({ message: "user successfully added", accessToken: token });
   }
   catch(err) {
     logger.error(err);
@@ -35,13 +37,14 @@ const login = async(req, res, err) => {
 // START CRUD
 const addTask = (req, res, err) => {
   try {
-    console.log(req.headers.username);
+    const users = readFile(constants.USER_CREDENTIALS);
+    const user = service.getUser(users, req.user);
     const task = req.body;
     service.validateTask(task);
     const usersTasks = readFile(constants.USER_TASKS);
-    const newTasks = service.addTask(usersTasks, task);
+    const newTasks = service.addTask(usersTasks, user.username, task);
     writeFile(constants.USER_TASKS, newTasks);
-    res.status(201).send({ message: "task added successfully"})
+    res.status(201).send({ message: "task added successfully"});
   }
   catch(err) {
     logger.error(err);
@@ -50,7 +53,19 @@ const addTask = (req, res, err) => {
 }
 
 const getAllTasks = (req, res, err) => {
-
+  try {
+    const users = readFile(constants.USER_CREDENTIALS);
+    const user = service.getUser(users, req.user);
+    const task = req.body;
+    service.validateTask(task);
+    const usersTasks = readFile(constants.USER_TASKS);
+    const allTasks = service.getAllTasks(usersTasks, user.username);
+    res.status(201).send(allTasks);
+  }
+  catch(err) {
+    logger.error(err);
+    res.status(err.status).send({ messsage: err.message });
+  }
 }
 
 const getTaskById = (req, res, err) => {

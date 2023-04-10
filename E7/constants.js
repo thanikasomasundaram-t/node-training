@@ -9,7 +9,7 @@ const DEBUG_LOG_PATH = './logs/debug_log.log';
 
 //
 SALT_ROUNDS = 10;
-
+SECRET_KEY = 'SIRIUS'
 
 module.exports = {
   USER_CREDENTIALS,
@@ -18,4 +18,7 @@ module.exports = {
   ALL_LOG_PATH,
   DEBUG_LOG_PATH,
   SALT_ROUNDS,
+  SECRET_KEY,
 }
+
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRoYW5pbmthcyIsImlhdCI6MTY4MTEwNTI2Mn0.Hb3GFIFzubQqgHdXnVUCc7Mux9Q19vAWUyj8dHwci7A

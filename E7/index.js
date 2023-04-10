@@ -21,9 +21,9 @@ app.use('/', (req, res, errr) => {
 app.listen(port, (req, res, err) => {
   console.log("listening on port ", port);
   if(!fs.existsSync(constants.USER_CREDENTIALS)) {
-    fileService.createFile(constants.USER_CREDENTIALS);
+    fileService.createFile(constants.USER_CREDENTIALS, []);
   }
   if(!fs.existsSync(constants.USER_TASKS)) {
-    fileService.createFile(constants.USER_TASKS);
+    fileService.createFile(constants.USER_TASKS, {});
   }
 })

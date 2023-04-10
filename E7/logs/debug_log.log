@@ -60,3 +60,16 @@
 [Apr-10-2023 06:26:33]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
 [Apr-10-2023 06:27:03]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
 [Apr-10-2023 06:27:37]	error:ENOENT: no such file or directory, open './data/user_tasks.json'
+[Apr-10-2023 11:10:26]	error:user already exists
+[Apr-10-2023 11:10:57]	error:user already exists
+[Apr-10-2023 11:11:10]	error:user already exists
+[Apr-10-2023 11:16:47]	error:service.addTask is not a function
+[Apr-10-2023 11:17:10]	error:service.addTask is not a function
+[Apr-10-2023 11:18:14]	error:service.addTask is not a function
+[Apr-10-2023 11:31:19]	error:users is not defined
+[Apr-10-2023 11:41:02]	error:user not found
+[Apr-10-2023 11:44:13]	error:Cannot read properties of undefined (reading 'username')
+[Apr-10-2023 11:49:19]	error:user already exists
+[Apr-10-2023 11:51:33]	error:user already exists
+[Apr-10-2023 11:51:54]	error:Cannot read properties of undefined (reading 'username')
+[Apr-10-2023 11:52:15]	error:service.getAllTasks is not a function
