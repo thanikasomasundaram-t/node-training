@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-const constants = require('./constants');
+const constants = require('./constants/constants');
 const router = require('./router/routes');
 const fileService = require('./utils/fileService');
 const cors = require('cors');
