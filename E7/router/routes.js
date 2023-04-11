@@ -20,7 +20,7 @@ router.get('/', authenticateToken, controller.getAllTasks);
 router.get('/:id', authenticateToken, controller.getTaskById);
 
 //update tasks
-router.put('/', authenticateToken, controller.updateTask);
+router.put('/:id', authenticateToken, controller.updateTask);
 
 //delete tasks
 router.delete('/:id', authenticateToken, controller.deleteTask);

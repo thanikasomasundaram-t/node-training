@@ -59,3 +59,29 @@
 [Apr-10-2023 14:42:41]	error:Assignment to constant variable.
 [Apr-10-2023 14:42:59]	error:Assignment to constant variable.
 [Apr-10-2023 14:52:19]	error:usersTasks[user].keys is not a function
+[Apr-11-2023 06:02:07]	error:user not found
+[Apr-11-2023 06:03:16]	error:user not found
+[Apr-11-2023 06:03:17]	error:user not found
+[Apr-11-2023 06:04:13]	error:user not found
+[Apr-11-2023 06:04:14]	error:user not found
+[Apr-11-2023 06:07:05]	error:user not found
+[Apr-11-2023 06:07:16]	error:password doesnot match
+[Apr-11-2023 06:12:04]	error:validate error
+[Apr-11-2023 06:12:31]	error:validate error
+[Apr-11-2023 06:13:21]	error:validate error
+[Apr-11-2023 06:13:25]	error:validate error
+[Apr-11-2023 06:13:40]	error:validate error
+[Apr-11-2023 06:14:09]	error:validate error
+[Apr-11-2023 06:29:36]	error:validate error
+[Apr-11-2023 06:30:04]	error:validate error
+[Apr-11-2023 06:30:11]	error:validate error
+[Apr-11-2023 06:31:40]	error:validate error
+[Apr-11-2023 06:31:58]	error:validate error
+[Apr-11-2023 06:40:57]	error:Cannot read properties of undefined (reading 'userName')
+[Apr-11-2023 07:02:49]	error:id is not defined
+[Apr-11-2023 07:03:20]	error:The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+[Apr-11-2023 07:04:52]	error:Cannot read properties of undefined (reading '168117432999')
+[Apr-11-2023 07:06:08]	error:task not found
+[Apr-11-2023 07:12:41]	error:Cannot read properties of undefined (reading 'userName')
+[Apr-11-2023 07:14:25]	error:updatedTasks is not defined
+[Apr-11-2023 07:15:40]	error:task not found

@@ -5,12 +5,12 @@ const jwt = require('jsonwebtoken');
 
 // START SIGNUP
 const generateToken = (user) => {
-  const token = jwt.sign({ username: user.username }, constants.SECRET_KEY);
+  const token = jwt.sign({ userName: user.userName }, constants.SECRET_KEY);
   return token;
 }
 
 const checkUserAlreadyExists = (users, incomingUser) => {
-  if (!users.find((user) => user.username === incomingUser.username)) {
+  if (!users.find((user) => user.userName === incomingUser.userName)) {
     return true;
   }
   else {
@@ -25,7 +25,7 @@ const checkUserAlreadyExists = (users, incomingUser) => {
 
 const authenticateUser = async (users, incomingUser) => {
   try {
-    const user = users.find((user) => user.username === incomingUser.username);
+    const user = users.find((user) => user.userName === incomingUser.userName);
     if (user) {
       const passwordCheck = await bcrypt.compare(incomingUser.password, user.password);
       if (passwordCheck) {
@@ -71,7 +71,7 @@ const addUser = async (users, incomingUser) => {
 }
 
 const getUser = (users, incomingUser) => {
-  const user = users.find((user) => user.username === incomingUser.username);
+  const user = users.find((user) => user.userName === incomingUser.userName);
   if(user) {
     return user;
   }
@@ -84,20 +84,53 @@ const getUser = (users, incomingUser) => {
 }
 
 const validateTask = (task) => {
+  console.log(task)
   let flag = true;
-  console.log(task.description == undefined || !(/^[a-zA-z]{1,50}$/.test(task.description)));
   if(task.title == undefined || !(/^[a-zA-z]{1,50}$/.test(task.title))) {
-    console.log("1234567")
+    console.log("1")
     flag = false;
+  }
+  if(task.description == undefined || !(/^[a-zA-z]{1,50}$/.test(task.description))) {
+    console.log("2")
+    flag = false;
+  }
+  if(task.priority == undefined || !(/^[0-9]{1,2}$/.test(task.priority))) {
+    console.log("3")
+    flag = false;
+  }
+  if(task.dueDate == undefined || !(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/.test(task.dueDate))) {
+    console.log("4")
+    flag = false;
+  }
+
+  if(flag) {
+    return true;
+  }
+  throw {
+    name: "BadInputException",
+    level: "warn",
+    message: "validate error",
+    status: 400,
   }
 
 }
 
-const addTaskId = (task) => {
-  return {
-    id: Date.now(),
-    ...task,
+const addTimeStamp = (task) => {
+
+  if(task.comments !== undefined) {
+    date = new Date();
+    timeStamp = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+
+    task.comments = task.comments.map((comment) => {
+      console.log(timeStamp);
+      return {
+        ...comment,
+        timeStamp,
+      }
+    })
   }
+  console.log(task)
+  return task;
 }
 
 const addTask = (usersTasks, user, task) => {
@@ -125,6 +158,39 @@ const getAllTasks = (usersTasks, user) => {
   return { message: "no tasks to show"};
 }
 
+const getTaskById = (usersTasks, user, id) => {
+  if(usersTasks[user][id]) {
+    return usersTasks[user][id];
+  }
+  return { message: "task doesnot exists"};
+}
+
+const updateTask = (usersTasks, user, task, id) => {
+  if(usersTasks[user][id] != undefined) {
+    usersTasks[user][id] = task;
+    return usersTasks;
+  }
+  throw {
+    name: "BadInputException",
+    level: "warn",
+    message: "task not found",
+    status: 404,
+  }
+}
+
+const deleteTaskById = (usersTasks, user, id) => {
+  if(usersTasks[user][id]) {
+    delete usersTasks[user][id];
+    return usersTasks;
+  }
+  throw {
+    name: "BadInputException",
+    level: "warn",
+    message: "task not found",
+    status: 404,
+  }
+}
+
 module.exports = {
   addUser,
   checkUserAlreadyExists,
@@ -134,5 +200,8 @@ module.exports = {
   generateToken,
   getUser,
   getAllTasks,
-  addTaskId,
+  addTimeStamp,
+  getTaskById,
+  updateTask,
+  deleteTaskById,
 }
