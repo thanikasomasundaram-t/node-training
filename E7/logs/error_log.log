@@ -63,3 +63,49 @@
 [Apr-11-2023 07:12:41]	error:Cannot read properties of undefined (reading 'userName')
 [Apr-11-2023 07:14:25]	error:updatedTasks is not defined
 [Apr-11-2023 07:15:40]	error:task not found
+[Apr-12-2023 13:58:59]	error:ENOENT: no such file or directory, open 'ff'
+[Apr-12-2023 13:59:51]	error:ENOENT: no such file or directory, open 'ff'
+[Apr-12-2023 14:00:43]	error:file not found
+[Apr-12-2023 14:00:55]	error:file not found
+[Apr-12-2023 14:01:01]	error:file not found
+[Apr-12-2023 14:03:22]	error:file cannot be read
+[Apr-12-2023 14:04:23]	error:user already exists
+[Apr-12-2023 14:04:44]	error:user already exists
+[Apr-12-2023 14:04:48]	error:data and salt arguments required
+[Apr-12-2023 14:08:36]	error:file cannot be read
+[Apr-12-2023 14:08:48]	error:ENOENT: no such file or directory, open 'ff'
+[Apr-12-2023 14:12:38]	error:task not found
+[Apr-12-2023 15:03:33]	error:Console is not defined
+[Apr-12-2023 15:03:39]	error:Console is not defined
+[Apr-12-2023 15:03:57]	error:Console is not defined
+[Apr-12-2023 15:04:05]	error:task not found
+[Apr-12-2023 15:04:20]	error:Console is not defined
+[Apr-12-2023 15:04:48]	error:Console is not defined
+[Apr-12-2023 15:05:15]	error:Console is not defined
+[Apr-12-2023 15:05:47]	error:Console is not defined
+[Apr-12-2023 15:06:12]	error:Console is not defined
+[Apr-12-2023 15:06:33]	error:Console is not defined
+[Apr-12-2023 15:06:54]	error:Console is not defined
+[Apr-12-2023 15:07:30]	error:Console is not defined
+[Apr-12-2023 15:07:58]	error:Console is not defined
+[Apr-12-2023 15:08:05]	error:Console is not defined
+[Apr-13-2023 06:31:18]	error:Cannot set headers after they are sent to the client
+[Apr-13-2023 06:31:18]	error:Cannot set headers after they are sent to the client
+[Apr-13-2023 06:33:43]	error:type is not availabe
+[Apr-13-2023 06:33:54]	error:type is not mentioned
+[Apr-13-2023 06:34:05]	error:type field is not mentioned
+[Apr-13-2023 06:34:13]	error:usersTasks is not defined
+[Apr-13-2023 06:35:12]	error:usersTasks is not defined
+[Apr-13-2023 06:35:52]	error:usersTasks is not defined
+[Apr-13-2023 06:36:19]	error:usersTasks is not defined
+[Apr-13-2023 06:36:51]	error:Assignment to constant variable.
+[Apr-13-2023 06:37:11]	error:Assignment to constant variable.
+[Apr-13-2023 06:44:22]	error:validate error
+[Apr-13-2023 06:50:02]	error:usersTasks is not defined
+[Apr-13-2023 06:50:29]	error:type is not availabe
+[Apr-13-2023 06:50:51]	error:type is not availabe
+[Apr-13-2023 06:51:20]	error:no tasks to show
+[Apr-13-2023 06:51:46]	error:no tasks to show
+[Apr-13-2023 06:51:53]	error:no tasks to show
+[Apr-13-2023 07:06:23]	error:type field is not mentioned
+[Apr-13-2023 07:09:16]	error:validate error

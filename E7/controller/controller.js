@@ -12,7 +12,6 @@ const signup = async (req, res, err) => {
     let newUsers = await service.addUser(users, incomingUser);
     writeFile(constants.USER_CREDENTIALS, newUsers);
     const token = service.generateToken(incomingUser);
-    console.log(token);
     res.send({ message: "user successfully added", accessToken: token });
   }
   catch (err) {
@@ -71,6 +70,7 @@ const getAllTasks = (req, res, err) => {
 const getTaskById = (req, res, err) => {
   try {
     const taskId = req.params.id;
+    console.log(" fdgh" , taskId);
     const users = readFile(constants.USER_CREDENTIALS);
     const user = service.getUser(users, req.user);
     const usersTasks = readFile(constants.USER_TASKS);
@@ -123,11 +123,39 @@ const deleteTask = (req, res, err) => {
 
 // START FEATURES
 const filterTasks = (req, res, err) => {
-
+  try {
+    console.log("in")
+    console.log(req.query);
+    res.send("ok")
+  }
+  catch(err) {
+    logger.error(err);
+    res.status(err.status).send({ messsage: err.message });
+  }
 }
 
 const sortTasks = (req, res, err) => {
 
+}
+
+const findService = (req, res, err) => {
+  try {
+    if(Object.keys(req.query).length !== 0) {
+      const users = readFile(constants.USER_CREDENTIALS);
+      const user = service.getUser(users, req.user);
+      const usersTasks = readFile(constants.USER_TASKS);
+      const userTasks = service.getAllTasks(usersTasks, user.userName);
+      const filteredTasks = service.findService(userTasks, req.query);
+      res.send(filteredTasks);
+    }
+    else {
+      getAllTasks(req, res, err);
+    }
+  }
+  catch(err) {
+    logger.error(err);
+    res.status(err.status).send({ messsage: err.message });
+  }
 }
 
 module.exports = {
@@ -140,4 +168,5 @@ module.exports = {
   deleteTask,
   filterTasks,
   sortTasks,
+  findService,
 }

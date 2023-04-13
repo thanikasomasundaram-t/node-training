@@ -5,13 +5,28 @@ const createFile = (path, data) => {
     fs.writeFileSync(path,JSON.stringify(data), 'utf-8');
   }
   catch(err) {
-    throw err;
+    throw {
+      name: "FileIOException",
+      level: "error",
+      message: "file cannot be created",
+      status: 500,
+    };
   }
 }
 
 const readFile = (path) => {
-  const users = fs.readFileSync(path);
-  return JSON.parse(users);
+  try {
+    const users = fs.readFileSync(path);
+    return JSON.parse(users);
+  }
+  catch(err) {
+    throw {
+      name: "FileIOException",
+      level: "error",
+      message: err.message,
+      status: 500,
+    };
+  }
 }
 
 const writeFile = (path, users) => {

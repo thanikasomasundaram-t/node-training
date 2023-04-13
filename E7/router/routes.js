@@ -14,7 +14,7 @@ router.post('/login', controller.login);
 router.post('/', authenticateToken, controller.addTask);
 
 //list all tasks created
-router.get('/', authenticateToken, controller.getAllTasks);
+router.get('/', authenticateToken, controller.findService);
 
 //list a specific tasks
 router.get('/:id', authenticateToken, controller.getTaskById);
