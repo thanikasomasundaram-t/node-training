@@ -223,8 +223,36 @@ const filterTasks = (userTasks, queries) => {
   return filteredTasks;
 }
 
-const sortTasks = () => {
-  const tasksKey = Object.keys(userTasks);
+const sortTasks = (userTasks, queries) => {
+  if(queries.sortMethod == 'title') {
+    query = 'title';
+  }
+  else if(queries.sortMethod == 'priority') {
+    query = 'priority';
+  }
+  else {
+    throw {
+      name: "BadInputException",
+      level: "warn",
+      message: "cannot sort using given query",
+      status: 400,
+    }
+  }
+  try {
+    const tasks = Object.entries(userTasks);
+    const sortedTasksArr = tasks.sort((firstId, secondId) => (firstId[1][query]).localeCompare(secondId[1][query]));
+    const sortedTasks = Object.fromEntries(sortedTasksArr);
+    return sortedTasks;
+  }
+  catch(err) {
+    throw {
+      name: "BadInputException",
+      level: "warn",
+      message: "cannot sort",
+      status: 500,
+    }
+  }
+
 }
 
 const findService = (userTasks, queries) => {
@@ -245,7 +273,9 @@ const findService = (userTasks, queries) => {
         return { message: "no tasks to show" }
       }
       return filteredTasks;
-      break;
+    case 'sort':
+      const sortedTasks = sortTasks(userTasks, queries);
+      return sortedTasks;
     default:
       throw {
         name: "BadInputException",

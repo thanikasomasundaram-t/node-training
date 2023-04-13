@@ -122,21 +122,6 @@ const deleteTask = (req, res, err) => {
 //END CRUD
 
 // START FEATURES
-const filterTasks = (req, res, err) => {
-  try {
-    console.log("in")
-    console.log(req.query);
-    res.send("ok")
-  }
-  catch(err) {
-    logger.error(err);
-    res.status(err.status).send({ messsage: err.message });
-  }
-}
-
-const sortTasks = (req, res, err) => {
-
-}
 
 const findService = (req, res, err) => {
   try {
@@ -146,7 +131,7 @@ const findService = (req, res, err) => {
       const usersTasks = readFile(constants.USER_TASKS);
       const userTasks = service.getAllTasks(usersTasks, user.userName);
       const filteredTasks = service.findService(userTasks, req.query);
-      res.send(filteredTasks);
+      res.status(200).send(filteredTasks);
     }
     else {
       getAllTasks(req, res, err);
@@ -166,7 +151,5 @@ module.exports = {
   getTaskById,
   updateTask,
   deleteTask,
-  filterTasks,
-  sortTasks,
   findService,
 }

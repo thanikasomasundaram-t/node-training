@@ -131,3 +131,15 @@
 [Apr-13-2023 06:51:53]	error:no tasks to show
 [Apr-13-2023 07:06:23]	error:type field is not mentioned
 [Apr-13-2023 07:09:16]	error:validate error
+[Apr-13-2023 09:54:23]	error:userTasks[element1][query].localCompare is not a function
+[Apr-13-2023 09:54:48]	error:userTasks[element1][query].localCompare is not a function
+[Apr-13-2023 09:55:22]	error:userTasks[element1][query].localCompare is not a function
+[Apr-13-2023 09:55:37]	error:userTasks[element1][query].localCompare is not a function
+[Apr-13-2023 09:56:49]	error:userTasks[element1][query].localCompare is not a function
+[Apr-13-2023 09:59:19]	error:Invalid status code: 1
+[Apr-13-2023 10:00:27]	error:Invalid status code: 1
+[Apr-13-2023 10:02:25]	error:Invalid status code: 1
+[Apr-13-2023 10:04:01]	error:Invalid status code: 1
+[Apr-13-2023 10:05:17]	error:Invalid status code: 1
+[Apr-13-2023 10:14:03]	error:usersTasks is not defined
+[Apr-13-2023 10:15:44]	error:Cannot read properties of undefined (reading 'localeCompare')

@@ -25,12 +25,6 @@ router.put('/:id', authenticateToken, controller.updateTask);
 //delete tasks
 router.delete('/:id', authenticateToken, controller.deleteTask);
 
-//FEATURES
-//filter tasks
-router.get('/filter', authenticateToken, controller.filterTasks);
-
-//sort tasks
-router.get('/sort', controller.sortTasks);
 
 
 module.exports = router;
