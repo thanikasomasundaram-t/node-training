@@ -125,13 +125,15 @@ const deleteTask = (req, res, err) => {
 
 const findService = (req, res, err) => {
   try {
-    if(Object.keys(req.query).length !== 0) {
+    const queries = req.query;
+    if(Object.keys(queries).length !== 0) {
       const users = readFile(constants.USER_CREDENTIALS);
       const user = service.getUser(users, req.user);
       const usersTasks = readFile(constants.USER_TASKS);
       const userTasks = service.getAllTasks(usersTasks, user.userName);
-      const filteredTasks = service.findService(userTasks, req.query);
-      res.status(200).send(filteredTasks);
+      let tasks = service.findService(userTasks, queries);
+      tasks = service.pagination(tasks, queries.offset);
+      res.status(200).send(tasks);
     }
     else {
       getAllTasks(req, res, err);

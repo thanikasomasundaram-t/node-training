@@ -286,6 +286,21 @@ const findService = (userTasks, queries) => {
   }
 }
 
+const pagination = (userTasks, offset) => {
+  taskKeys = Object.keys(userTasks);
+  tasks = [];
+  if(offset > taskKeys.length) {
+    offset = taskKeys.length;
+  }
+  if(offset) {
+   for(i = 0; i < offset; i++) {
+    tasks.push(userTasks[taskKeys[i]]);
+   }
+  }
+  console.log(tasks);
+  return tasks;
+}
+
 module.exports = {
   addUser,
   checkUserAlreadyExists,
@@ -300,4 +315,5 @@ module.exports = {
   updateTask,
   deleteTaskById,
   findService,
+  pagination,
 }
